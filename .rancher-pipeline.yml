@@ -14,6 +14,7 @@ stages:
         global.imagePullPolicy: Always
         global.registry: 081731760779.dkr.ecr.us-east-1.amazonaws.com
         global.sslCert: qa
+        global.imagePullSecrets[0].name: gcr-json-key
       name: default-redis-cluster
       targetNamespace: k3stest
 timeout: 60
