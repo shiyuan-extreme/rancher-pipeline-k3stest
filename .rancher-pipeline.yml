@@ -5,15 +5,16 @@ stages:
       catalogTemplate: cattle-global-data:xcloudiq-default-redis-cluster
       version: 5.0.6
       answers:
-        busyboxImageTag: 0.1.0
-        cert: test
-        enableIDMRedisCluster: "false"
-        enableMonitoring: "false"
-        enableMxRelay: "true"
-        hmVersion: 20.3.4.1
-        imagePullPolicy: Always
-        registry: 081731760779.dkr.ecr.us-east-1.amazonaws.com
-        sslCert: qa
+        global:
+          busyboxImageTag: 0.1.0
+          cert: test
+          enableIDMRedisCluster: "false"
+          enableMonitoring: "false"
+          enableMxRelay: "true"
+          hmVersion: 20.3.4.1
+          imagePullPolicy: Always
+          registry: 081731760779.dkr.ecr.us-east-1.amazonaws.com
+          sslCert: qa
       name: default-redis-cluster
       targetNamespace: k3stest
 timeout: 60
